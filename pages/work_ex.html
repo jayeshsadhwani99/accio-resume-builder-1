@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="../styles/global.css" >
+    <link rel="stylesheet" href="../styles/index.css" >
+</head>
+<body>
+    <header>
+        <h1 id="title">Resume Building Application</h1>
+        <h2 id="subtitle">Just answer the questions and we'll create a resume for you</h2>
+    </header>
+
+    <hr /> <!-- Horizontal Rule -->
+
+    <main>
+        <h3 id="category">Add your work</h3>
+
+        <form>
+            <div class="form-element">
+                <label for="position">Position</label>
+                <input type="text" placeholder="Enter your Position" name="position" id="position" />
+            </div>
+            
+            <div class="form-element">
+                <label for="company-name">Company name</label>
+                <input type="text" placeholder="Enter your company name" name="company-name" id="company-name" />
+            </div>
+
+            <div class="form-element">
+                <label for="start-date">Start Date</label>
+                <input type="month" placeholder="Enter your Start date" name="start-date" id="start-date" />
+            </div>
+
+            <div class="form-element">
+                <label for="end-date">End Date</label>
+                <input type="month" placeholder="Enter your End date" name="end-date" id="end-date" />
+            </div>
+
+            <div class="form-element checkbox">
+                <input type="checkbox" name="is-working" id="is-working" />
+                <label for="is-working">Are you still working here?</label>
+            </div>
+
+            <button>Next</button>
+        </form>
+    </main>
+</body>
+</html>

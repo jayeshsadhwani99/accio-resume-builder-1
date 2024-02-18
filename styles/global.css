@@ -59,6 +59,7 @@ form {
   padding: 1rem;
   border-radius: 5px;
   font-size: 1rem;
+  font-family: inherit;
 }
 
 .form-element textarea {
@@ -70,6 +71,13 @@ form {
 
   font-family: inherit;
   resize: none;
+}
+
+.form-element + .checkbox {
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
 }
 
 button {
