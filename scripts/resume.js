@@ -1,41 +1,41 @@
-// DOM - Document Object Model
-// DOM manipulation - elements, nodes
-
+const step = document
+  .getElementsByTagName("main")[0]
+  ?.getAttribute("data-step");
 const form = document.getElementsByTagName("form")[0];
-// How to get access to details?
-// 1. Connect to HTML - done
-// 2. Get the input
-// 3. Get data from my input
 
-// const name = document.querySelector("#name");
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const phoneInput = document.getElementById("number");
-const descriptionInput = document.getElementById("description");
+function handleSubmit(e) {
+  e.preventDefault();
 
-let formData = null;
+  switch (step) {
+    case steps.PERSONAL_DETAILS:
+      handlePersonalDetails();
+      break;
 
-// function -> code you write to repeat again and again or to organize
-function handleSubmit() {
-  const name = nameInput.value;
-  const email = emailInput.value;
-  const phone = phoneInput.value;
-  const description = descriptionInput.value;
+    case steps.WORK_EX:
+      handleWorkExperience();
+      break;
 
-  formData = {
-    name,
-    email,
-    phone,
-    description,
-  };
+    case steps.EDUCATION:
+      handleEducation();
+      break;
 
-  window.location.href = "/pages/work_ex.html";
+    case steps.LANGUAGES:
+      handleLanguages();
+      break;
+
+    case steps.SKILLS:
+      handleSkills();
+      break;
+
+    case steps.PROJECTS:
+      handleProjects();
+      break;
+
+    default:
+      break;
+  }
+
+  userData.save();
 }
 
-// Browser will emit events-> mouse move, mouse click, form submit, scroll page
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  // run, call
-  handleSubmit();
-});
+form.addEventListener("submit", handleSubmit);
