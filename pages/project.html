@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume Builder</title>
-    <link rel="stylesheet" href="../styles/global.css" >
-    <link rel="stylesheet" href="../styles/index.css" >
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+  </head>
+  <body>
     <header>
-        <h1 id="title">Resume Building Application</h1>
-        <h2 id="subtitle">Just answer the questions and we'll create a resume for you</h2>
+      <h1 id="title">Resume Building Application</h1>
+      <h2 id="subtitle">
+        Just answer the questions and we'll create a resume for you
+      </h2>
     </header>
 
-    <hr /> <!-- Horizontal Rule -->
+    <hr />
+    <!-- Horizontal Rule -->
 
-    <main>
-        <h3 id="category">Add your projects</h3>
+    <main data-step="projects">
+      <h3 id="category">Add your projects</h3>
 
-        <form>
-            <div class="form-element">
-                <label for="project-name">What is the name of your project?</label>
-                <input type="text" placeholder="Enter your Project Name" name="project-name" id="project-name" />
-            </div>
-            
-            <div class="form-element">
-                <label for="project-link">Project Link</label>
-                <input type="text" placeholder="Enter your project link" name="project-link" id="project-link" />
-            </div>
+      <form>
+        <div class="form-element">
+          <label for="project-name">What is the name of your project?</label>
+          <input
+            type="text"
+            placeholder="Enter your Project Name"
+            name="project-name"
+            id="project-name" />
+        </div>
 
-            <div class="form-element">
-                <label for="project-date">Project Date</label>
-                <input type="month" placeholder="Enter your project date" name="project-date" id="project-date" />
-            </div>
+        <div class="form-element">
+          <label for="project-link">Project Link</label>
+          <input
+            type="text"
+            placeholder="Enter your project link"
+            name="project-link"
+            id="project-link" />
+        </div>
 
-            <div class="form-element">
-                <label for="project-description">Description</label>
-                <textarea name="project-description" id="project-description" rows="10" placeholder="Enter your project description here"></textarea>
-            </div>
+        <div class="form-element">
+          <label for="project-date">Project Date</label>
+          <input
+            type="month"
+            placeholder="Enter your project date"
+            name="project-date"
+            id="project-date" />
+        </div>
 
-            <!-- <button>Next</button> -->
-            <a href="languages.html">Next</a>
-        </form>
+        <div class="form-element">
+          <label for="project-description">Description</label>
+          <textarea
+            name="project-description"
+            id="project-description"
+            rows="10"
+            placeholder="Enter your project description here"></textarea>
+        </div>
+
+        <div>
+          <button type="button" id="back">Back</button>
+          <button>Next</button>
+        </div>
+      </form>
     </main>
 
+    <script src="../scripts/appState.js"></script>
+    <script src="../scripts/steps.js"></script>
     <script src="../scripts/resume.js"></script>
-</body>
+    <script src="../scripts/handleProjects.js"></script>
+  </body>
 </html>

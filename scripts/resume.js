@@ -2,6 +2,11 @@ const step = document
   .getElementsByTagName("main")[0]
   ?.getAttribute("data-step");
 const form = document.getElementsByTagName("form")[0];
+const backBtn = document.getElementById("back");
+
+function handleBack() {
+  history.back();
+}
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -39,3 +44,4 @@ function handleSubmit(e) {
 }
 
 form.addEventListener("submit", handleSubmit);
+backBtn.addEventListener("click", handleBack);

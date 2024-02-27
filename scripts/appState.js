@@ -8,8 +8,8 @@ const userData = {
   workExperience: {},
   projects: {},
   education: {},
-  skills: {},
-  languages: {},
+  skills: [],
+  languages: [],
 
   init: function () {
     const savedDataString = localStorage.getItem("userData");

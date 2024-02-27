@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume Builder</title>
-    <link rel="stylesheet" href="../styles/global.css" >
-    <link rel="stylesheet" href="../styles/index.css" >
-    <link rel="stylesheet" href="../styles/languages.css" >
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/languages.css" />
+  </head>
+  <body>
     <header>
-        <h1 id="title">Resume Building Application</h1>
-        <h2 id="subtitle">Just answer the questions and we'll create a resume for you</h2>
+      <h1 id="title">Resume Building Application</h1>
+      <h2 id="subtitle">
+        Just answer the questions and we'll create a resume for you
+      </h2>
     </header>
 
-    <hr /> <!-- Horizontal Rule -->
+    <hr />
+    <!-- Horizontal Rule -->
 
-    <main>
-        <h3 id="category">Add Languages</h3>
+    <main data-step="languages">
+      <h3 id="category">Add Languages</h3>
 
-        <form id="language-form">
-            <div class="form-element">
-                <label for="language">Add your language</label>
-                <input type="text" placeholder="Enter your language" name="language" id="language" />
-            </div>
-            <button>Add</button>
-        </form>
+      <form id="language-form">
+        <div class="form-element">
+          <label for="language">Add your language</label>
+          <input
+            type="text"
+            placeholder="Enter your language"
+            name="language"
+            id="language" />
+        </div>
+        <button id="language-add" type="button">Add</button>
 
         <div class="languages">
-            <h3>Your languages</h3>
-            <div class="list">
-                <div class="language">
-                    English
-                    <i data-feather="x"></i>
-                </div>
-    
-                <div class="language">
-                    French
-                    <i data-feather="x"></i>
-                </div>
-    
-                <div class="language">
-                    Hindi
-                    <i data-feather="x"></i>
-                </div>
-            </div>
+          <h3>Your languages</h3>
+          <div class="list" id="language-list"></div>
         </div>
 
-        <a href="">Next</a>
+        <div>
+          <button type="button" id="back">Back</button>
+          <button>Next</button>
+        </div>
+      </form>
     </main>
 
     <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-        feather.replace();
-    </script>
-
+    <script src="../scripts/appState.js"></script>
+    <script src="../scripts/steps.js"></script>
     <script src="../scripts/resume.js"></script>
-</body>
+    <script src="../scripts/handleLanguages.js"></script>
+  </body>
 </html>

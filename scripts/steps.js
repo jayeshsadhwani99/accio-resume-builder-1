@@ -2,7 +2,7 @@ const steps = {
   PERSONAL_DETAILS: "personal-details",
   WORK_EX: "work-experience",
   EDUCATION: "education",
-  LANGUAGES: "language",
+  LANGUAGES: "languages",
   PROJECTS: "projects",
   SKILLS: "skills",
 };

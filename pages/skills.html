@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume Builder</title>
-    <link rel="stylesheet" href="../styles/global.css" >
-    <link rel="stylesheet" href="../styles/index.css" >
-    <link rel="stylesheet" href="../styles/skills.css" >
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/skills.css" />
+  </head>
+  <body>
     <header>
-        <h1 id="title">Resume Building Application</h1>
-        <h2 id="subtitle">Just answer the questions and we'll create a resume for you</h2>
+      <h1 id="title">Resume Building Application</h1>
+      <h2 id="subtitle">
+        Just answer the questions and we'll create a resume for you
+      </h2>
     </header>
 
-    <hr /> <!-- Horizontal Rule -->
+    <hr />
+    <!-- Horizontal Rule -->
 
-    <main>
-        <h3 id="category">Add Skills</h3>
+    <main data-step="skills">
+      <h3 id="category">Add Skills</h3>
 
-        <form id="skill-form">
-            <div class="form-element">
-                <label for="skill">Add your skill</label>
-                <input type="text" placeholder="Enter your skill" name="skill" id="skill" />
-            </div>
-            <button>Add</button>
-        </form>
+      <form id="skill-form">
+        <div class="form-element">
+          <label for="skill">Add your skill</label>
+          <input
+            type="text"
+            placeholder="Enter your skill"
+            name="skill"
+            id="skill" />
+        </div>
+        <button id="skill-add" type="button">Add</button>
 
         <div class="skills">
-            <h3>Your skills</h3>
-            <div class="list">
-                <div class="skill">
-                    HTML
-                    <i data-feather="x"></i>
-                </div>
-    
-                <div class="skill">
-                    CSS
-                    <i data-feather="x"></i>
-                </div>
-    
-                <div class="skill">
-                    JS
-                    <i data-feather="x"></i>
-                </div>
-            </div>
+          <h3>Your skills</h3>
+          <div class="list" id="skill-list"></div>
         </div>
 
-        <a href="project.html">Next</a>
+        <div>
+          <button type="button" id="back">Back</button>
+          <button>Next</button>
+        </div>
+      </form>
     </main>
 
     <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-        feather.replace();
-    </script>
-
+    <script src="../scripts/appState.js"></script>
+    <script src="../scripts/steps.js"></script>
     <script src="../scripts/resume.js"></script>
-</body>
+    <script src="../scripts/handleSkills.js"></script>
+  </body>
 </html>
