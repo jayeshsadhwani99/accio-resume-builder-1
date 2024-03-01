@@ -1,3 +1,5 @@
+const url = "http://localhost:3001";
+
 const step = document
   .getElementsByTagName("main")[0]
   ?.getAttribute("data-step");
@@ -41,6 +43,26 @@ function handleSubmit(e) {
   }
 
   userData.save();
+
+  if (step === steps.LANGUAGES) {
+    sendDataToServer();
+  }
+}
+
+async function sendDataToServer() {
+  try {
+    const res = await fetch(url + "/resume", {
+      method: "POST",
+      body: localStorage.getItem("userData"),
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+    const data = await res.json();
+    console.log("Successfully sent data to server", data);
+  } catch (e) {
+    console.log("Error sending data to server", e);
+  }
 }
 
 form.addEventListener("submit", handleSubmit);
